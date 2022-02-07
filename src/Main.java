@@ -1,4 +1,5 @@
-import aux.FigurasG;
+import aux.Contas;
+import aux.FigurasGeometricas;
 import aux.TipoFigura;
 import figuras.Circulo;
 import figuras.Quadrado;
@@ -8,12 +9,13 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Contas contas = new Contas();
         Retangulo retangulo = new Retangulo(TipoFigura.RETANGULO, 10, 5);
         Quadrado quadrado = new Quadrado(TipoFigura.QUADRADO, 7);
         Circulo circulo = new Circulo(TipoFigura.CIRCULO, 25);
         
 
-        FigurasG figuras = new FigurasG(retangulo, quadrado, circulo);
+        FigurasGeometricas figuras = new FigurasGeometricas(retangulo, quadrado, circulo, contas);
 
         System.out.println("\n----------- Áreas das Figuras -------------\n");
 

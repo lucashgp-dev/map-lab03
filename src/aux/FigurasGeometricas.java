@@ -4,18 +4,18 @@ import figuras.Circulo;
 import figuras.Quadrado;
 import figuras.Retangulo;
 
-public class FigurasG {
+public class FigurasGeometricas {
 
     private Retangulo retangulo;
     private Quadrado quadrado;
     private Circulo circulo;
-    private Contas contas = new Contas();
+    private Contas contas;
 
-    public FigurasG(Retangulo retangulo, Quadrado quadrado, Circulo circulo) {
+    public FigurasGeometricas(Retangulo retangulo, Quadrado quadrado, Circulo circulo, Contas contas) {
         this.retangulo = retangulo;
         this.quadrado = quadrado;
         this.circulo = circulo;
-
+        this.contas = contas;
     }
 
     public void areaFiguras(TipoFigura tipo) {
@@ -31,7 +31,7 @@ public class FigurasG {
                 System.out.println("A área deste círculo é: " + String.format("%.2f", contas.areaCirculo(circulo)));
                 break;
             case TODAS:
-                System.out.println("Todas as áreas são: " +
+                System.out.println("Todas as áreas são: \n" +
                         String.format("%.2f", contas.areaRetangulo(retangulo)) + " "
                         + String.format("%.2f", contas.areaQuadrado(quadrado)) + " e "
                         + String.format("%.2f", contas.areaCirculo(circulo)) +
@@ -48,18 +48,22 @@ public class FigurasG {
 
         switch (tipo) {
             case RETANGULO:
-                System.out.println("O perímetro do retângulo é: " + String.format("%.2f", contas.perimetroRetangulo(retangulo)));
+                System.out.println(
+                        "O perímetro do retângulo é: " + String.format("%.2f", contas.perimetroRetangulo(retangulo)));
                 break;
             case QUADRADO:
-                System.out.println("O perímetro do quadrado é: " + String.format("%.2f", contas.perimetroQuadrado(quadrado)));
+                System.out.println(
+                        "O perímetro do quadrado é: " + String.format("%.2f", contas.perimetroQuadrado(quadrado)));
                 break;
             case CIRCULO:
-                System.out.println("O perímetro do círculo é: " + String.format("%.2f", contas.perimetroCirculo(circulo)));
+                System.out.println(
+                        "O perímetro do círculo é: " + String.format("%.2f", contas.perimetroCirculo(circulo)));
                 break;
             case TODAS:
-                System.out.println("Todas os perímetros são: " +
-                String.format("%.2f", contas.perimetroRetangulo(retangulo)) + " " + String.format("%.2f", contas.perimetroQuadrado(quadrado)) + " e "
-                        + String.format("%.2f", contas.perimetroCirculo(circulo))+
+                System.out.println("Todas os perímetros são: \n" +
+                        String.format("%.2f", contas.perimetroRetangulo(retangulo)) + " "
+                        + String.format("%.2f", contas.perimetroQuadrado(quadrado)) + " e "
+                        + String.format("%.2f", contas.perimetroCirculo(circulo)) +
                         ". retângulo, quadrado e círculo, respectivamente");
                 break;
             default:
@@ -82,7 +86,8 @@ public class FigurasG {
                 break;
 
             case TODAS:
-                System.out.println("Todas os parâmetros das figuras são: " + retangulo.toString()+ "\n" + quadrado.toString() + "\n"+ circulo.toString() + "\n");
+                System.out.println("Todas os parâmetros das figuras são: \n" + retangulo.toString() + "\n"
+                        + quadrado.toString() + "\n" + circulo.toString() + "\n");
                 break;
 
             default:

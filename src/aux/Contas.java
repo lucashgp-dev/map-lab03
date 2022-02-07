@@ -11,15 +11,15 @@ public class Contas {
     }
 
     public double areaQuadrado(Quadrado quadrado) {
-        return Math.pow(quadrado.getLado(), 2);
+        return (quadrado.getLado()* 2);
     }
 
     public double areaCirculo(Circulo circulo) {
-        return Math.PI * (Math.pow(circulo.getRaio(), 2));
+        return ((2 * 3.14 * circulo.getRaio()));
     }
 
     public double perimetroRetangulo(Retangulo retangulo) {
-        return (2 * retangulo.getAltura()) + (2 * retangulo.getAltura());
+        return (2 * retangulo.getAltura()) + (2 * retangulo.getLargura());
     }
 
     public double perimetroQuadrado(Quadrado quadrado) {
