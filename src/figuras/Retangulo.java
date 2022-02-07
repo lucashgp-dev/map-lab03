@@ -29,14 +29,6 @@ public class Retangulo {
         this.largura = largura;
     }
 
-    public TipoFigura getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(TipoFigura tipo) {
-        this.tipo = tipo;
-    }
-
     @Override
     public String toString() {
         return "O retângulo criado tem altura de tamanho: " + getAltura() +

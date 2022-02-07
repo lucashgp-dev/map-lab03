@@ -18,13 +18,6 @@ public class Quadrado {
         this.lado = lado;
     }
 
-    public TipoFigura getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(TipoFigura tipo) {
-        this.tipo = tipo;
-    }
 
     @Override
     public String toString() {
