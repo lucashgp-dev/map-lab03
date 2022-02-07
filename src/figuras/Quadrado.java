@@ -2,11 +2,13 @@ package figuras;
 
 import aux.TipoFigura;
 
+
 public class Quadrado {
     private TipoFigura tipo;
     private double lado;
 
     public Quadrado(TipoFigura tipo, double lado) {
+        this.tipo = tipo;
         this.lado = lado;
     }
 
@@ -18,6 +20,9 @@ public class Quadrado {
         this.lado = lado;
     }
 
+    public TipoFigura getTipo() {
+        return tipo;
+    }
 
     @Override
     public String toString() {

@@ -26,41 +26,42 @@ class ContasTest {
     @BeforeAll
     static void setup() {
         contas = new Contas();
-        retangulo = new Retangulo(TipoFigura.QUADRADO, altura,largura);
+        retangulo = new Retangulo(TipoFigura.QUADRADO, altura, largura);
         circulo = new Circulo(TipoFigura.CIRCULO, raio);
         quadrado = new Quadrado(TipoFigura.QUADRADO, lado);
 
         System.out.println("Testes Iniciados.");
     }
 
+
     @Test
     void areaRetangulo() {
-        assertEquals("4.00",    String.format("%.2f", contas.areaRetangulo(retangulo)));
+        assertEquals("4.00", String.format("%.2f", contas.areaRetangulo(retangulo)));
     }
 
     @Test
     void areaQuadrado() {
-        assertEquals("4.00",    String.format("%.2f", contas.areaQuadrado(quadrado)));
+        assertEquals("4.00", String.format("%.2f", contas.areaQuadrado(quadrado)));
     }
 
     @Test
     void areaCirculo() {
-        assertEquals("12.57",    String.format("%.2f", contas.areaCirculo(circulo)));
+        assertEquals("12.57", String.format("%.2f", contas.areaCirculo(circulo)));
     }
 
     @Test
     void perimetroRetangulo() {
-        assertEquals("8.00",    String.format("%.2f", contas.perimetroRetangulo(retangulo)));
+        assertEquals("8.00", String.format("%.2f", contas.perimetroRetangulo(retangulo)));
     }
 
     @Test
     void perimetroQuadrado() {
-        assertEquals("8.00",   String.format("%.2f",  contas.perimetroQuadrado(quadrado)));
+        assertEquals("8.00", String.format("%.2f", contas.perimetroQuadrado(quadrado)));
     }
 
     @Test
     void perimetroCirculo() {
-        assertEquals("6.00",   String.format("%.2f",  contas.perimetroCirculo(circulo)));
+        assertEquals("6.00", String.format("%.2f", contas.perimetroCirculo(circulo)));
     }
 
     @AfterAll

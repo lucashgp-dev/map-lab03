@@ -20,10 +20,15 @@ public class Circulo {
         this.raio = raio;
     }
 
+    public TipoFigura getTipo() {
+        return tipo;
+    }
+
     @Override
     public String toString() {
         return "O circulo criado tem raio de tamanho: " + getRaio() + ". ";
 
     }
+
 
 }

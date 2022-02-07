@@ -1,20 +1,17 @@
 import aux.FigurasGeometricas;
 import aux.TipoFigura;
-import figuras.Circulo;
-import figuras.Quadrado;
-import figuras.Retangulo;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        // Criando Figuras
-        Retangulo retangulo = new Retangulo(TipoFigura.RETANGULO, 10, 5);
-        Quadrado quadrado = new Quadrado(TipoFigura.QUADRADO, 7);
-        Circulo circulo = new Circulo(TipoFigura.CIRCULO, 25);
+        //Classe Principal
+        FigurasGeometricas figuras = new FigurasGeometricas();
 
-        // Adicionar Figuras
-        FigurasGeometricas figuras = new FigurasGeometricas(retangulo, quadrado, circulo);
+        // Criando Figuras
+        figuras.criarCirculo(TipoFigura.CIRCULO, 25);
+        figuras.criarQuadrado(TipoFigura.QUADRADO, 7);
+        figuras.criarRetangulo(TipoFigura.RETANGULO, 10, 5);
 
         System.out.println("\n----------- Áreas das Figuras -------------\n");
         figuras.areaFiguras(TipoFigura.QUADRADO);

@@ -17,12 +17,12 @@ class RetanguloTest {
     private static Retangulo retangulo2;
     private static double altura = 10.0;
     private static double largura = 5.0;
-    private static TipoFigura tipo = TipoFigura.QUADRADO;
+    private static TipoFigura tipo = TipoFigura.RETANGULO;
 
     @BeforeAll
     static void setup() {
-       retangulo1 = new Retangulo(tipo, altura,largura);
-        retangulo2 = new Retangulo(tipo, altura,largura);
+        retangulo1 = new Retangulo(tipo, altura, largura);
+        retangulo2 = new Retangulo(tipo, altura, largura);
 
     }
 
@@ -30,7 +30,6 @@ class RetanguloTest {
     static void done() {
         System.out.println("Testes Finalizados.");
     }
-
 
     @Test
     void getAltura() {
@@ -55,7 +54,12 @@ class RetanguloTest {
     }
 
     @Test
+    void getTipo() {
+        assertEquals(TipoFigura.RETANGULO, retangulo1.getTipo());
+    }
+
+    @Test
     void testToString() {
-        assertEquals(   retangulo1.toString(), "O retângulo criado tem altura de tamanho: 10.0 e largura de tamanho: 5.0. ");
+        assertEquals(retangulo1.toString(), "O retângulo criado tem altura de tamanho: 10.0 e largura de tamanho: 5.0. ");
     }
 }

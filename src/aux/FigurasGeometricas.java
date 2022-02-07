@@ -11,12 +11,49 @@ public class FigurasGeometricas {
     private Circulo circulo;
     private Contas contas = new Contas();
 
+
+    public FigurasGeometricas() {
+
+    }
+
     public FigurasGeometricas(Retangulo retangulo, Quadrado quadrado, Circulo circulo) {
         this.retangulo = retangulo;
         this.quadrado = quadrado;
         this.circulo = circulo;
-
     }
+
+    public boolean criarCirculo(TipoFigura tipo, double raio) {
+
+        try {
+            Circulo circulo = new Circulo(tipo, raio);
+            this.circulo = circulo;
+
+        } catch (Exception error) {
+            return false;
+        }
+        return true;
+    }
+
+    public boolean criarQuadrado(TipoFigura tipo, double lado) {
+        try {
+            Quadrado quadrado = new Quadrado(TipoFigura.QUADRADO, 7);
+            this.quadrado = quadrado;
+        } catch (Exception error) {
+            return false;
+        }
+        return true;
+    }
+
+    public boolean criarRetangulo(TipoFigura tipo, double altura, double largura) {
+        try {
+            Retangulo retangulo = new Retangulo(TipoFigura.RETANGULO, 10, 5);
+            this.retangulo = retangulo;
+        } catch (Exception error) {
+            return false;
+        }
+        return true;
+    }
+
 
     public void areaFiguras(TipoFigura tipo) {
         switch (tipo) {
