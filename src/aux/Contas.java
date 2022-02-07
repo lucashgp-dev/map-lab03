@@ -11,7 +11,7 @@ public class Contas {
     }
 
     public double areaQuadrado(Quadrado quadrado) {
-        return (quadrado.getLado()* 2);
+        return (quadrado.getLado() * 2);
     }
 
     public double areaCirculo(Circulo circulo) {

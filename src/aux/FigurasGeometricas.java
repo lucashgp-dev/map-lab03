@@ -9,13 +9,13 @@ public class FigurasGeometricas {
     private Retangulo retangulo;
     private Quadrado quadrado;
     private Circulo circulo;
-    private Contas contas;
+    private Contas contas = new Contas();
 
-    public FigurasGeometricas(Retangulo retangulo, Quadrado quadrado, Circulo circulo, Contas contas) {
+    public FigurasGeometricas(Retangulo retangulo, Quadrado quadrado, Circulo circulo) {
         this.retangulo = retangulo;
         this.quadrado = quadrado;
         this.circulo = circulo;
-        this.contas = contas;
+
     }
 
     public void areaFiguras(TipoFigura tipo) {

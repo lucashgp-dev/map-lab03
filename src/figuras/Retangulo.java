@@ -40,6 +40,6 @@ public class Retangulo {
     @Override
     public String toString() {
         return "O retângulo criado tem altura de tamanho: " + getAltura() +
-                " e largura de tamanho: " + getLargura()  + ". " ;
+                " e largura de tamanho: " + getLargura() + ". ";
     }
 }
