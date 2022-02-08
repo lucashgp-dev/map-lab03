@@ -26,7 +26,7 @@ class ContasTest {
     @BeforeAll
     static void setup() {
         contas = new Contas();
-        retangulo = new Retangulo(TipoFigura.QUADRADO, altura, largura);
+        retangulo = new Retangulo(TipoFigura.RETANGULO, altura, largura);
         circulo = new Circulo(TipoFigura.CIRCULO, raio);
         quadrado = new Quadrado(TipoFigura.QUADRADO, lado);
 
